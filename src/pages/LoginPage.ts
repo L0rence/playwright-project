@@ -1,11 +1,12 @@
 import { Page, expect } from "@playwright/test";
 import HomePage from "./HomePage";
+import logger from "../utils/LoggerUtil";
 //import logger from "../utils/LoggerUtil";
 //import findValidElement from "../utils/SelfHealingUtill";
 
 export default class LoginPage {
   private readonly usernameInputSelector = "#username";
-  private readonly usernameInputSelectors = ["#username",'input[name="username"]', ".username", "//*[@id='username]"];
+  //private readonly usernameInputSelectors = ["#username",'input[name="username"]', ".username", "//*[@id='username]"];
   private readonly passwordInputSelector = "#password";
   private readonly loginButtonSelector = "#Login";
 
@@ -20,12 +21,12 @@ export default class LoginPage {
 
   async navigateToLoginPage() {
     await this.page.goto("https://login.salesforce.com");
-   // logger.info("Navigated to login.salesforce.com");
+    logger.info("Navigated to login.salesforce.com");
   }
 
   async fillUsername(username: string) {
     await this.page.locator(this.usernameInputSelector).fill(username);
-    //logger.info("Filled username");
+    logger.info("Filled username");
   }
 
   /*async fillUsername_selfheal(username: string) {
@@ -38,7 +39,7 @@ export default class LoginPage {
 
   async fillPassword(password: string) {
     await this.page.locator(this.passwordInputSelector).fill(password);
-    //logger.info("Filled pasword");
+    logger.info("Filled pasword");
   }
 
   async clickLoginButton() {
@@ -46,10 +47,10 @@ export default class LoginPage {
       .locator(this.loginButtonSelector)
       .click()
       .catch((error) => {
-      //  logger.error(`Error clicking login button: ${error}`);
+        logger.error(`Error clicking login button: ${error}`);
         throw error; // rethrow the error if needed
       })
-      //.then(() => logger.info("Clicked login button"));
+      .then(() => logger.info("Clicked login button"));
 
     const homePage = new HomePage(this.page);
     return homePage;

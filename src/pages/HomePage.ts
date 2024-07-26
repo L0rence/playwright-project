@@ -1,4 +1,5 @@
 import { Page, expect } from "@playwright/test";
+import logger from "../utils/LoggerUtil";
 //import logger from "../utils/LoggerUtil";
 //import ContactPage from "./ContactPage";
 
@@ -12,9 +13,9 @@ export default class HomePage {
     await expect(this.page.locator(this.serviceTitleLocator)).toBeVisible({
       timeout: 15000,
     }).catch((error) => {
-  //    logger.error(`Error clicking login button: ${error}`);
+      logger.error(`Error clicking login button: ${error}`);
       throw error; // rethrow the error if needed
-    })//.then(()=>logger.info("Service Title is visible"));
+    }).then(()=>logger.info("Service Title is visible"));
   }
 
 
