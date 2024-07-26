@@ -18,3 +18,34 @@
 2024-07-25T04:56:44-04:00 [info]: Filled pasword
 2024-07-25T04:56:48-04:00 [info]: Clicked login button
 2024-07-25T04:56:57-04:00 [info]: Service Title is visible
+2024-07-26T06:39:12-04:00 [info]: Navigated to login.salesforce.com
+2024-07-26T06:39:12-04:00 [info]: Filled username
+2024-07-26T06:39:12-04:00 [info]: Filled pasword
+2024-07-26T06:39:12-04:00 [info]: Clicked login button
+2024-07-26T06:39:27-04:00 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: locator('span[title=\'Setup\']')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for locator('span[title=\'Setup\']')[22m
+
+2024-07-26T06:40:18-04:00 [info]: Navigated to login.salesforce.com
+2024-07-26T06:40:18-04:00 [info]: Filled username
+2024-07-26T06:40:18-04:00 [info]: Filled pasword
+2024-07-26T06:40:19-04:00 [info]: Clicked login button
+2024-07-26T06:40:34-04:00 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: locator('span[title=\'Setup\']')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for locator('span[title=\'Setup\']')[22m
+
+2024-07-26T06:42:09-04:00 [info]: Navigated to login.salesforce.com
+2024-07-26T06:42:09-04:00 [info]: Filled username
+2024-07-26T06:42:09-04:00 [info]: Filled pasword
+2024-07-26T06:42:13-04:00 [info]: Clicked login button
+2024-07-26T06:42:23-04:00 [info]: Service Title is visible
