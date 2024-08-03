@@ -9,6 +9,7 @@ if(!process.env.NODE_ENV){
 }else{
   require('dotenv').config({path:`${__dirname}//src//config//.env.${process.env.NODE_ENV}`});
 }
+console.log("environmet is not qa");
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
