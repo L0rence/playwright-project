@@ -9,10 +9,10 @@ test('login test', async ({ page }) => {
   const loginPage= new LoginPage(page);
   await loginPage.navigateToLoginPage();
   try {
-     await loginPage.fillUsername(process.env.userID!);
-     await loginPage.fillPassword(process.env.pass!);
-   // await loginPage.fillUsername(decrypt(process.env.userID!));
-   // await loginPage.fillPassword(decrypt(process.env.pass!));
+    // await loginPage.fillUsername(process.env.userID!);
+    // await loginPage.fillPassword(process.env.pass!);
+    await loginPage.fillUsername(decrypt(process.env.userID!));
+    await loginPage.fillPassword(decrypt(process.env.pass!));
     // Additional login actions
   } catch (error) {
     console.error('Error filling username or password:', error);
