@@ -27,12 +27,12 @@ test('login loff', async ({ page }) => {
  // console.log(process.env.NODE_ENV);
  // console.log(process.env.userID);
  // console.log(process.env.pass);
-  // const plaintext = "larry@company.sandbox";
-  // const encryptedText = encrypt(plaintext);
-  // console.log('SALT:', process.env.SALT);
-  // console.log('Encrypted:',encryptedText);
-  // const decryptedText = decrypt(encryptedText);
-  // console.log('Decrypted:', decryptedText);
+  //  const plaintext = "secret_sauce";
+  //  const encryptedText = encrypt(plaintext);
+  //  console.log('SALT:', process.env.SALT);
+  //  console.log('Encrypted:',encryptedText);
+  //  const decryptedText = decrypt(encryptedText);
+  //  console.log('Decrypted:', decryptedText);
   // encryptEnvFile();
   // console.log(decrypt('xxx'))
    

@@ -5,10 +5,10 @@ import logger from "../utils/LoggerUtil";
 //import findValidElement from "../utils/SelfHealingUtill";
 
 export default class LoginPage {
-  private readonly usernameInputSelector = "#username";
+  private readonly usernameInputSelector = "#user-name";
   //private readonly usernameInputSelectors = ["#username",'input[name="username"]', ".username", "//*[@id='username]"];
   private readonly passwordInputSelector = "#password";
-  private readonly loginButtonSelector = "#Login";
+  private readonly loginButtonSelector = "#login-button";
 
   constructor(private page: Page) {}
 
@@ -20,8 +20,9 @@ export default class LoginPage {
   }
 
   async navigateToLoginPage() {
-    await this.page.goto("https://login.salesforce.com");
-    logger.info("Navigated to login.salesforce.com");
+    // this.page.goto("https://login.salesforce.com");
+    this.page.goto("https://www.saucedemo.com/v1/index.html");
+    logger.info("Navigated to login suacedemo website");
   }
 
   async fillUsername(username: string) {

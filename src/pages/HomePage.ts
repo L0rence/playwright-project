@@ -4,18 +4,18 @@ import logger from "../utils/LoggerUtil";
 //import ContactPage from "./ContactPage";
 
 export default class HomePage {
-  private readonly serviceTitleLocator = "span[title='Setup']";
+  private readonly productTitleLocator = "//div[@class='product_label']";
   private readonly contactsLinkLocator = "Contacts";
 
   constructor(private page: Page) {}
 
   async expectServiceTitleToBeVisible() {
-    await expect(this.page.locator(this.serviceTitleLocator)).toBeVisible({
+    await expect(this.page.locator(this.productTitleLocator)).toBeVisible({
       timeout: 15000,
     }).catch((error) => {
       logger.error(`Error clicking login button: ${error}`);
       throw error; // rethrow the error if needed
-    }).then(()=>logger.info("Service Title is visible"));
+    }).then(()=>logger.info("Product Title is visible"));
   }
 
 
